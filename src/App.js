@@ -26,7 +26,7 @@ export default function App() {
       <>
          {!click &&
             <div className="mx-auto my-32">
-               <img src="https://media.tenor.com/1jrUvITt1QcAAAAi/github-sticker.gif" className="flex justify-center h-60 mb-10 mx-auto">
+               <img src="https://media.tenor.com/1jrUvITt1QcAAAAi/github-sticker.gif" alt="" className="flex justify-center h-60 mb-10 mx-auto">
                </img>
                <p className="font-bold text-3xl text-center mb-2 text-pink-600">
                   Will you be my Valentine ?
@@ -49,7 +49,7 @@ export default function App() {
          {
             click &&
             <div className="mx-auto my-40">
-               <img src="https://media.tenor.com/7Ie2NGeUuFgAAAAi/cutecat.gif" className="flex justify-center h-60 mb-10 mx-auto" />
+               <img src="https://media.tenor.com/7Ie2NGeUuFgAAAAi/cutecat.gif" alt="" className="flex justify-center h-60 mb-10 mx-auto" />
                <p className="font-bold text-3xl text-center mb-10 text-pink-600">
                   เย้ๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆ
                </p>
