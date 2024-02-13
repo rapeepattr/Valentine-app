@@ -5,7 +5,7 @@ import './App.css'
 
 export default function App() {
    const [state, setState] = useState(1);
-   const [click, setClick] = useState(false);
+   const [click, setClick] = useState(0);
 
    function mouseOver() {
       if (state === 1) {
@@ -24,7 +24,7 @@ export default function App() {
 
    return (
       <>
-         {!click &&
+         {click == 0 &&
             <div className="mx-auto my-32">
                <img src="https://media.tenor.com/1jrUvITt1QcAAAAi/github-sticker.gif" alt="" className="flex justify-center h-60 mb-10 mx-auto">
                </img>
@@ -40,23 +40,38 @@ export default function App() {
                      ไม่ ;(
                   </button>
 
-                  <button onClick={() => setClick(true)} type="button" class="font-bold text-xl ml-20 px-5 py-3 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 rounded-lg text-center me-2 mb-2">
+                  <button onClick={() => setClick(1)} type="button" class="font-bold text-xl ml-20 px-5 py-3 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 rounded-lg text-center me-2 mb-2">
                      ก็ด้ะ
                   </button>
                </div>
             </div>
          }
          {
-            click &&
+            click == 1 &&
+
             <div className="mx-auto my-40">
                <img src="https://media.tenor.com/7Ie2NGeUuFgAAAAi/cutecat.gif" alt="" className="flex justify-center h-60 mb-10 mx-auto" />
                <p className="font-bold text-3xl text-center mb-10 text-pink-600">
-                  เย้ๆๆๆๆๆๆๆๆๆๆๆๆๆๆๆ
+                  เย้ๆๆ น่ารักมากไอ้เตี้ย(มาก)
                </p>
-               <div className="flex align-middle justify-center">
-                  <button onClick={() => alert("ไม่ได้เว้ย")} type="button" class="font-bold text-xl px-5 py-3 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 rounded-lg text-center">
+               <div className="flex align-middle justify-center gap-2">
+                  <button onClick={() => { alert('<3 <3 <3 ดูนี่ๆ'); setClick(2); }} type="button" class="font-bold text-xl px-5 py-3 text-white bg-gradient-to-r from-pink-400 via-pink-500 to-pink-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 rounded-lg text-center">
+                     กดนี่ๆ
+                  </button>
+                  <button onClick={() => { alert('ไม่ได้เฟ้ย'); setClick(2); }} type="button" class="font-bold text-xl px-5 py-3 text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 rounded-lg text-center">
                      กวนตีนเกิน ขอเปลี่ยนใจ
                   </button>
+               </div>
+            </div>
+         }
+         {
+            click == 2 &&
+            <div className="mx-auto my-40">
+               <div className="flex flex-col items-center justify-center gap-5">
+                  <div className="flex items-center justify-center gap-3">
+                     <img src={process.env.PUBLIC_URL + '/1.JPG'} alt="Logo" className=" h-80" />
+                  </div>
+                  <p className="font-semibold text-3xl text-pink-500">Happy Valentine ค้าบบ ไปเที่ยวกัน เย้ๆ 🥰🥰🥰</p>
                </div>
             </div>
          }
